@@ -1,0 +1,37 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.App{
+    background-color: #d4d5d7;
+    background-color: #fdfdfd;
+
+}
+
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(./fonts/Montserrat-Medium.otf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(./fonts/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: Montserrat-BoldItalic;
+    src: url(./fonts/Montserrat-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: FuturaBO;
+    src: url(./fonts/FuturaStd-BoldOblique.otf);
+}
+.galeria{
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    background-color: aqua;
+}

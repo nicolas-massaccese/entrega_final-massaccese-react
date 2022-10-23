@@ -1,0 +1,130 @@
+.cardBox{
+    height: 340px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between ;
+    align-items: center;
+    background-color:  white;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.148);
+    cursor: pointer;
+}
+
+.fotoProducto {
+    width: 200px;
+    text-align: center;
+    /* background-color: rgb(218, 218, 218); */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.fotoProducto img{
+    width: 100%;
+}
+
+.marcoSkew{
+    height: 26px;
+    width: 80%;
+    transform: skewX(-9deg);
+    background-color: rgb(0, 0, 0)
+}
+
+.modelo{
+    font-family: "Montserrat-BoldItalic";
+    font-size: 15px;
+    transform: skewX(9deg);
+    text-align: center;
+    line-height: 27px;
+    color: #fff;
+    /* background-color: #8bbc75; */
+    position: relative;
+}
+
+.estrellaFigure{
+    height: 310px;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.detalle{
+    height: 40px;
+    display: none;
+    position: absolute;
+    background-color: none;
+    font-family: "Montserrat-Bold";
+    font-size: 20px;
+    color: #fff;
+    background-color: aqua;
+}
+
+.afueraCarrito{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 30px;
+    filter: invert(76%) sepia(19%) saturate(8%) hue-rotate(337deg) brightness(102%) contrast(100%);
+    cursor: pointer;
+}
+
+.adentroCarrito{
+    filter: invert(72%) sepia(9%) saturate(1528%) hue-rotate(57deg) brightness(94%) contrast(92%);
+}
+
+.caracteristicas{
+    height: 25px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aquamarine; */
+}
+.tipo{
+    font-family: "Montserrat-Medium";
+    font-size: 15px;
+    color: black;
+    /* background-color: rgb(130, 130, 130); */
+}
+
+.barra{
+    height: 15px;
+    width: 1px;
+    background-color: #42414d;
+}
+
+.medida{
+    /* width: 60%; */
+    text-align: right;
+    font-family: "Montserrat-Medium";
+    font-size: 12px;
+    color: #8e8e8e;
+    /* background-color: aqua; */
+}
+
+.precio{
+    height: 37px;
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    color: #8bbc75;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #8bbc751f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mostrarInfo{
+    display: none;
+}

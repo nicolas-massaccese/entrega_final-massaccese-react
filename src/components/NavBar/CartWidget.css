@@ -1,0 +1,15 @@
+#carrito{
+    line-height: 70px;
+    height: 30px;
+    /* position: relative; */
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    /* background-color: brown; */
+}
+
+
+#carrito img{
+    height: 100%;
+    margin-right: 30px;
+}
