@@ -5,7 +5,9 @@ import {CartProvider} from './contexts/CartContext';
 
 import NavBar from './components/NavBar/NavBar';
 import Home from './Routes/Home/Home';
-import PopupDetalle from './Routes/PopupDetalle/PopupDetalle';
+import Detail from './Routes/Detail/Detail';
+import Cart from './Routes/Cart/Cart';
+
 
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
           <Routes>
               <Route exact path="/" element= {<Home />} />
               <Route exact path='/Nuestros-Productos/:tipoProducto' element={<Home />} />
-              <Route exact path='/Nuestros-Productos/:tipoProducto/:modelo' element={<PopupDetalle />} />
+              <Route exact path='/Nuestros-Productos/:tipoProducto/:modelo' element={<Detail />} />
+              <Route exact path='/Cart' element={<Cart />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

@@ -1,26 +1,34 @@
 import './CountDetail.css';
 
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 
-const CountDetail = () =>{
+const CountDetail = ({initial, stock, onAdd}) =>{
 
-    const [numero, setNumero] = useState(0)
+    const [number, setNumber] = useState(parseInt(initial))
     
-    let stock = 10
-    const disminuye = () => {
-        setNumero(numero - 1);
+    const decrease = () => {
+        setNumber(number - 1);
     };
     
-    const aumenta = () => {
-        setNumero(numero + 1);
+    const increases = () => {
+        setNumber(number + 1);
     };
+
+    useEffect(() => {
+        setNumber(parseInt(initial));
+    
+    }, [initial])
+    
 
     return(
         
             <div className='count'>
-                <button disabled = {numero <= 0} onClick={disminuye}>-</button>
-                <p className='numCount'>{numero}</p>
-                <button disabled = {numero >= stock} onClick={aumenta}>+</button>
+                <button disabled = {number <= initial} onClick={decrease}>-</button>
+                <span className='numCount'>{number}</span>
+                <button disabled = {number >= stock} onClick={increases}>+</button>
+                <div>
+                    <button disabled={stock <= 0} onClick={() => onAdd(number)}>Agregar</button>
+                </div>
             </div>
     )
 }

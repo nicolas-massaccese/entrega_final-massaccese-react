@@ -1,5 +1,6 @@
 import './ItemDetailContainer.css';
-import CountDetail from './CountDetail';
+import ItemDetail from './ItemDetail';
+
 
 import { useEffect, useState, useContext } from 'react'
 import { getFirestore, doc, getDoc, } from 'firebase/firestore';
@@ -9,7 +10,7 @@ import {CartContext} from '../../contexts/CartContext';
 
 const ItemDetailContainer = () => {
     const { modelo } = useParams()
-    const [productoDetail, setProductoDetail] = useState({})
+    const [productDetail, setProductoDetail] = useState({})
     const {cart} = useContext(CartContext);
 
 
@@ -23,32 +24,17 @@ const ItemDetailContainer = () => {
     return (
         <div className='containerDetail'>
             <div className=''>
-                {productoDetail.length === 0 ? (
+                
+                {productDetail.length === 0 ? (
                 <div>Cargando...</div>
                 ) : (
-                    <article key={productoDetail.id} className="cardBox">
-                        <div className="fotoProducto">
-                            <img src={productoDetail.imgSrc} alt=""/>
-                        </div>
-
-                        <div className="marcoSkew">
-                            <p className="modelo">{productoDetail.modelo}</p>
-                        </div>
+                    <div>
+                        <ItemDetail productDetail = {productDetail} />
                         
-                        <div className="caracteristicas">
-                            <p className="tipo">{productoDetail.tipo}</p>
-                            <div className="barra"></div>
-                            <p className="medida">{productoDetail.tamanio}</p>
-                        </div>
-                        <div className="precio">
-                            <p>${productoDetail.precio}</p>
-                        </div>
-                    </article>                
+                    </div>
                 )}
             </div>
-            <CountDetail/>
-
-            <button>Agregar</button>
+                    
 
         </div>
     

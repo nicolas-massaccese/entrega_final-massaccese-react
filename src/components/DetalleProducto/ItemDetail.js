@@ -8,37 +8,39 @@ import { useState } from 'react';
 
 
 
-const ItemDetail = ({ productoDetail }) => {
+const ItemDetail = ({productDetail}) => {
+
+
     const [gotoCart, setGotoCart] = useState(false)
     const {addProduct} = useCartContext();
 
     const onAdd = (quantity) => {
+        console.log( `compraste $ ${quantity}`);
         setGotoCart(true)
-        addProduct(productoDetail, quantity)
+        addProduct(productDetail, quantity)
     }
 
     return (
-        <article key={productoDetail.id} className="cardBox">
+        <article key={productDetail.id} className="cardBox">
             <div className="fotoProducto">
-                <img src={productoDetail.imgSrc} alt=""/>
+                <img src={productDetail.imgSrc} alt=""/>
             </div>
 
             <div className="marcoSkew">
-                <p className="modelo">{productoDetail.modelo}</p>
+                <p className="modelo">{productDetail.modelo}</p>
             </div>
             
             <div className="caracteristicas">
-                <p className="tipo">{productoDetail.tipo}</p>
+                <p className="tipo">{productDetail.tipo}</p>
                 <div className="barra"></div>
-                <p className="medida">{productoDetail.tamanio}</p>
+                <p className="medida">{productDetail.tamanio}</p>
             </div>
             <div className="precio">
-                <p>${productoDetail.precio}</p>
+                <p>${productDetail.precio}</p>
             </div>
 
-            <CountDetail/>
+            <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
 
-            <button>Agregar</button>
         </article>
         
     )

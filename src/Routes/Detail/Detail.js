@@ -1,7 +1,7 @@
 import ItemDetailContainer from '../../components/DetalleProducto/ItemDetailContainer';
 
 
-const PopupDetalle = () => {
+const Detail = () => {
 
 
     return (
@@ -12,5 +12,5 @@ const PopupDetalle = () => {
     )
 }
 
-export default PopupDetalle
+export default Detail
 

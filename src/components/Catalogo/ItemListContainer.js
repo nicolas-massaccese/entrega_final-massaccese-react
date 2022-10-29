@@ -9,7 +9,7 @@ import { getFirestore, collection, getDocs, query, where, } from 'firebase/fires
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState([])
+    const [products, setProducts] = useState([])
     const { tipoProducto } = useParams()
 
     useEffect(() => {
@@ -19,19 +19,19 @@ const ItemListContainer = () => {
             const q = query(itemsCollection, where('tipo', '==', tipoProducto));
             getDocs(q)
             .then((snapshot) => {
-                const arrproductos = snapshot.docs.map((doc) => ({
+                const arrproducts = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data(),
                 }));
-                setProductos(arrproductos);
+                setProducts(arrproducts);
             });
         } else{
             getDocs(itemsCollection).then((snapshot) => {
-                const arrproductos = snapshot.docs.map((doc) => ({
+                const arrproducts = snapshot.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data(),
                 }));
-                setProductos(arrproductos);
+                setProducts(arrproducts);
             });
 
     }}, [tipoProducto])
@@ -39,15 +39,15 @@ const ItemListContainer = () => {
     return (
         <div>
             <div className=''>
-            {productos.length === 0 ? (
+            {products.length === 0 ? (
             <div>Cargando...</div>
             ) : (
                 <div className='container'>
-                    {productos.map((producto) => {                        
+                    {products.map((product) => {                        
                         return (
-                        <div key = {producto.id}>
-                            <Link className='linkStyle' to={`/Nuestros-Productos/${producto.tipo}/${producto.id}`} >
-                                <ItemList producto = {producto} />
+                        <div key = {product.id}>
+                            <Link className='linkStyle' to={`/Nuestros-Productos/${product.tipo}/${product.id}`} >
+                                <ItemList product = {product} />
                             </Link>
                         </div> 
                         )

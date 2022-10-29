@@ -3,7 +3,7 @@ import './Home.css';
 import ItemListContainer from '../../components/Catalogo/ItemListContainer';
 
 
-function App() {
+function Home() {
     return (
         <div className='container'>           
             <ItemListContainer />            
@@ -12,4 +12,4 @@ function App() {
     )
 }
 
-export default App;
+export default Home;
