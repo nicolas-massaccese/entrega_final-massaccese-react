@@ -2,17 +2,14 @@ import './ItemDetailContainer.css';
 import ItemDetail from './ItemDetail';
 
 
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, } from 'react'
 import { getFirestore, doc, getDoc, } from 'firebase/firestore';
 
 import { useParams } from 'react-router-dom'
-import {CartContext} from '../../contexts/CartContext';
 
 const ItemDetailContainer = () => {
     const { modelo } = useParams()
     const [productDetail, setProductoDetail] = useState({})
-    const {cart} = useContext(CartContext);
-
 
     useEffect(() => {
         const db = getFirestore()

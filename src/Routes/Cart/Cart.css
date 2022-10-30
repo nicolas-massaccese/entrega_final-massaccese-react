@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.cartContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: column, nowrap;
+    justify-content: flex-end;
+}
+.ordenCompra{
+    right: 0px;
+    width: 320px;
+    background-color: aqua;
+}

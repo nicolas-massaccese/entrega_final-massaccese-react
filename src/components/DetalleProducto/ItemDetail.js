@@ -11,12 +11,11 @@ import { useState } from 'react';
 const ItemDetail = ({productDetail}) => {
 
 
-    const [gotoCart, setGotoCart] = useState(false)
+    const [goToCart, setGoToCart] = useState(false)
     const {addProduct} = useCartContext();
 
     const onAdd = (quantity) => {
-        console.log( `compraste $ ${quantity}`);
-        setGotoCart(true)
+        setGoToCart(true)
         addProduct(productDetail, quantity)
     }
 
@@ -38,8 +37,12 @@ const ItemDetail = ({productDetail}) => {
             <div className="precio">
                 <p>${productDetail.precio}</p>
             </div>
+        {
+            goToCart
+                ? <div><CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} /> <Link to='/Cart'>Comprar Ahora</Link></div> 
+                : <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
 
-            <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
+        }
 
         </article>
         
