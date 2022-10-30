@@ -23,10 +23,12 @@ const CountDetail = ({initial, stock, onAdd}) =>{
     return(
         
             <div className='count'>
-                <button disabled = {number <= initial} onClick={decrease}>-</button>
-                <span className='numCount'>{number}</span>
-                <button disabled = {number >= stock} onClick={increases}>+</button>
-                <div>
+                <div className='countValue'>
+                    <button disabled = {number <= initial} onClick={decrease}>-</button>
+                    <span className='numCount'>{number}</span>
+                    <button disabled = {number >= stock} onClick={increases}>+</button>
+                </div>
+                <div className='countAdd'>
                     <button disabled={stock <= 0} onClick={() => onAdd(number)}>Agregar</button>
                 </div>
             </div>

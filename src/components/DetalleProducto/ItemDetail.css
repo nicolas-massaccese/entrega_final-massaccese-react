@@ -1,0 +1,244 @@
+.detailBox{
+    height: auto;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between ;
+    align-items: center;
+    box-shadow: none;
+    border-radius: none;
+
+}
+
+
+.fotoProductoDetail {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-color: none;
+}
+
+.fotoProductoDetail img{
+    width: 100%;
+}
+
+.infoDetail{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.marcoSkewDetail{
+    height: 36px;
+    width: 70%;
+    transform: skewX(-9deg);
+    background-color: rgb(0, 0, 0)
+}
+
+
+.modeloDetail{
+    font-family: "Montserrat-BoldItalic";
+    font-size: 18px;
+    transform: skewX(9deg);
+    text-align: center;
+    line-height: 37px;
+    color: #fff;
+    position: relative;
+}
+
+
+.caracteristicasDetail{
+    height: 40px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tipoDetail{
+    font-family: "Montserrat-Medium";
+    font-size: 15px;
+    color: black;
+}
+
+.barra{
+    height: 15px;
+    width: 1px;
+    background-color: #42414d;
+}
+
+.medida{
+    text-align: right;
+    font-family: "Montserrat-Medium";
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.descriptionDetail{
+    width: 70%;
+    font-family: "Montserrat-Medium";
+    font-size: 15px;
+    line-height: 18px;
+}
+.precioDetail{
+    height: 37px;
+    width: 70%;
+    margin-top: 20px;
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    color: #8bbc75;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #8bbc751f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mostrarInfo{
+    display: none;
+}
+
+
+
+.count{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: aqua; */
+
+}
+
+.countValue{
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.countValue button{
+    height: 30px;
+    width: 30px;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: none;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.countValue button:hover{
+    background-color: #8bbc755c;
+}
+
+.numCount{
+    font-size: 16px;
+}
+
+.countAdd{
+    height: 35px;
+    width: 70%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.countAdd button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  rgba(0, 0, 0, 0.405);
+}
+
+.countAdd button:hover{
+    background-color: black;
+    color: white;
+}
+
+.comprarAhora{
+    height: 35px;
+    width: 70%;
+    text-align: center;
+    line-height: 35px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    color: white;
+    background-color: #8bbc75;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.comprarAhora:hover{
+    color: #8bbc75;
+    background-color: #8bbc751f;
+}
+
+
+@media only screen and (min-width: 480px){
+
+}
+
+@media only screen and (min-width: 768px){
+    .detailBox{
+        height: auto;
+        width: 600px;
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center ;
+        align-items: center;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.148);
+        border-radius: 10px;
+
+    }
+    .fotoProductoDetail {
+        height: 500px;
+        width: 50%;
+        background-color: rgba(218, 218, 218, 0.311);
+    }
+    .fotoProductoDetail img{
+        margin-top: 30%;
+        width: 100%;
+
+    }
+    .infoDetail{
+        width: 50%;
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+}

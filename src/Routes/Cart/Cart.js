@@ -11,7 +11,7 @@ function Cart() {
 
     const defaultForm = {cards:'', cardNum:'', name:'', email:'', message:'', }
 
-    const { cart, totalPrice } = useCartContext();
+    const { cart, totalPrice, clearCart } = useCartContext();
     const [form, setForm] = useState(defaultForm);
     const [id, setId] = useState()
     
@@ -19,9 +19,9 @@ function Cart() {
     if (cart.length === 0){
 
         return(
-            <div>
+            <div className='mensajeAuto'>
                 <p>No hay elementos en el carrito</p>
-                <Link to='/'>Seguir comprando</Link>                 
+                <Link className='botonesAgr' to='/'>Seguir comprando</Link>                 
             </div>
 
         )
@@ -44,48 +44,55 @@ function Cart() {
     const resetHandler = () => {
         setForm(defaultForm)
         setId('')
+        clearCart()
     }
 
     return (
         <div >
             {id ? (
-                <div>Gracias por su compra, su orden de compra es la {id}
-                    <button onClick={resetHandler} >Seguir Comprando</button>
+                <div className='mensajeAuto'>
+                    <p>
+                        Gracias por su compra, su orden de compra es la {id}
+                    </p>
+                    <Link className='botonesAgr' to='/'onClick={resetHandler}>Seguir comprando</Link>  
                 </div>
                 ) : (
                 <div className='cartContainer'>
                     <div>
                         {cart.map(product => <ItemCart key= {product.id} product={product} />)}
-                        <p>
-                            total: {totalPrice()}
+                        <p className='totalPrice'>
+                            TOTAL: ${totalPrice()}
                         </p>
                     </div>
-                    <form className='ordenCompra' onSubmit={submitHandler}>
-                        <div>
-                        <select name='cards' size="1"onChange={changeHandler}>
-                            <option name='cards' id='cards' value={form.cards}>Visa</option>
-                            <option name='cards' id='cards' value={form.cards}>Master Card</option>
-                            <option name='cards' id='cards' value={form.cards}>American Express</option>
-                        </select>
-                        <div>
-                            <label htmlFor='cardNum'>Numero</label>
-                            <input name='cardNum' id='cardNum' value={form.cardNum} onChange={changeHandler}  />
-                        </div>
-                        </div>
-                        <div>
-                            <label htmlFor='name'>Nombre</label>
-                            <input name='name' id='name' value={form.name} onChange={changeHandler}  />
-                        </div>
-                        <div>
-                            <label htmlFor='email'>Email</label>
-                            <input type='email' name='email' id='email' value={form.email} onChange={changeHandler}  />
-                        </div>
-                        <div>
-                            <label htmlFor='message'>Mensaje</label>
-                            <input name='message' id='message' value={form.message} onChange={changeHandler}  />
-                        </div>
-                        <button>Finalizar Compra</button>
-                    </form>
+                    <div className='ordenCompra'>
+                        <form  className='formulario' onSubmit={submitHandler}>
+                            <h4>Orden de compra</h4>
+                            <select id='cardNum' name='cards' size="1" value={form.cards} onChange={changeHandler}>
+                                <option>Elegir Tarjeta</option>
+                                <option>Visa</option>
+                                <option>Master Card</option>
+                                <option>American Express</option>
+                            </select>
+                            <div>
+                                <label htmlFor='cardNum'>Numero</label>
+                                <input name='cardNum' id='cardNum' value={form.cardNum} onChange={changeHandler}  />
+                            </div>
+                            <div>
+                                <label htmlFor='name'>Nombre</label>
+                                <input name='name' id='name' value={form.name} onChange={changeHandler}  />
+                            </div>
+                            <div>
+                                <label htmlFor='email'>Email</label>
+                                <input type='email' name='email' id='email' value={form.email} onChange={changeHandler}  />
+                            </div>
+                            <div>
+                                <label htmlFor='message'>Comentarios</label>
+                                <input name='message' id='message' value={form.message} onChange={changeHandler}  />
+                            </div>
+                            <button className='finalizarCompra'>Finalizar Compra</button>
+                        </form>
+                    </div>
+                    
                 </div>
             )}
         </div>    

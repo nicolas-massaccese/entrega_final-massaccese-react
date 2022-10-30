@@ -20,30 +20,35 @@ const ItemDetail = ({productDetail}) => {
     }
 
     return (
-        <article key={productDetail.id} className="cardBox">
-            <div className="fotoProducto">
+        <article key={productDetail.id} className="detailBox">
+            <div className="fotoProductoDetail">
                 <img src={productDetail.imgSrc} alt=""/>
             </div>
+            <div className="infoDetail">
+                <div className="marcoSkewDetail">
+                    <p className="modeloDetail">{productDetail.modelo}</p>
+                </div>                
+                <div className="caracteristicasDetail">
+                    <p className="tipoDetail">{productDetail.tipo}</p>
+                    <div className="barra"></div>
+                    <p className="medida">{productDetail.tamanio}</p>
+                </div>
+                <p className="descriptionDetail">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque ea necessitatibus saepe fugiat nostrum minus, iure impedit eum et quibusdam aliquam quae eligendi laudantium libero provident pariatur earum ex veniam.
+                </p>
+                <div className="precioDetail">
+                    <p>${productDetail.precio}</p>
+                </div>                            
+                {
+                    goToCart
+                        ? <div className='count'>
+                            <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
+                            <Link className='comprarAhora' to='/Cart'>Comprar Ahora</Link>
+                        </div> 
+                        : <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
 
-            <div className="marcoSkew">
-                <p className="modelo">{productDetail.modelo}</p>
+                }
             </div>
-            
-            <div className="caracteristicas">
-                <p className="tipo">{productDetail.tipo}</p>
-                <div className="barra"></div>
-                <p className="medida">{productDetail.tamanio}</p>
-            </div>
-            <div className="precio">
-                <p>${productDetail.precio}</p>
-            </div>
-        {
-            goToCart
-                ? <div><CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} /> <Link to='/Cart'>Comprar Ahora</Link></div> 
-                : <CountDetail initial={1} stock={productDetail.stock} onAdd={onAdd} />
-
-        }
-
         </article>
         
     )

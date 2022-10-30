@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# 1000-Feet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## La empresa
 
-## Available Scripts
+1000-Ft es un emprendimiento familiar de diseño y fabricación de bolsos pensados para su uso en el rubro aeronautico, pero también urbano.
+Algunos de nuestros modelos fueron inspirados en grandes emblemas y sucesos históricos de la aviación.
 
-In the project directory, you can run:
+### Categorias
 
-### `npm start`
+En nuestra **HOME** encontrarán el catálogo completo de nuestros productos o bien también pueden utilizar el filtrado de productos que figura en la barra de navegación:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Mochilas
+- Bolsos
+- Morrales
+- Accesorios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Detalle del producto
 
-### `npm test`
+Al seleccionar el producto elegido, la pagina los redireccionara al detalle del producto en cuestion,
+donde podrán conocer aún más en detalle sus carácteristicas y elegir la cantidad de productos que qeuiera agregar a ssu carrito de compras
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Carrito de compras
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En esta instancia tendra un detalle de los valores y cantidades de productos agregados al carrito y para finalizar la compra debera antes cargar los datos solicitdos dentro de l orden de producto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Compra concretada
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Luego de concretar la compra, aparecera en pantalla un codigo único que es la referencia de su orden de compra.
+El msimo deberá guardarlo ya que se le será requerido a la hora de recibir los productos adquiridos.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

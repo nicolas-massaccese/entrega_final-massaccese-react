@@ -20,12 +20,12 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='containerDetail'>
-            <div className=''>
+            <div className='containerDetail'>
                 
                 {productDetail.length === 0 ? (
                 <div>Cargando...</div>
                 ) : (
-                    <div>
+                    <div className='containerDetail'>
                         <ItemDetail productDetail = {productDetail} />
                         
                     </div>

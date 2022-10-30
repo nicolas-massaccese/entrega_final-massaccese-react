@@ -6,13 +6,213 @@
 }
 
 .cartContainer{
+    height: auto;
+    width: 100%;
+    display: block ;
+    /* background-color: aqua; */
+}
+
+.ordenCompra{
+    height: 100vh;
+    width: 100%;
+    right: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: black;
+}
+
+.formulario{
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    /* background-color: #42414d; */
+    width: 80%;
+    color: white;
+}
+
+.formulario div{
+    /* background-color: tomato; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    margin-right: 20px;
+}
+
+#ItemCart{
     width: 100%;
     display: flex;
-    flex-flow: column, nowrap;
-    justify-content: flex-end;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    margin-top:10px;
 }
-.ordenCompra{
-    right: 0px;
-    width: 320px;
-    background-color: aqua;
+
+.fotoCart{
+    width: 50%;
+}
+
+
+.fotoCart img{
+    width: 100%;
+}
+
+.infoCart{
+    width: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.marcoSkewCart{
+    height: 30px;
+    width: 100%;
+    transform: skewX(-9deg);
+    background-color: rgb(0, 0, 0)
+}
+
+.modeloCart{
+    font-family: "Montserrat-BoldItalic";
+    font-size: 15px;
+    transform: skewX(9deg);
+    text-align: center;
+    line-height: 31px;
+    color: #fff;
+    position: relative;
+}
+
+.botones{
+    height: 30px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  rgba(0, 0, 0, 0.405);
+    text-decoration: none;
+}
+
+.botones:hover{
+    background-color: #8bbc75;
+    color: white;
+    border:none;
+
+}
+
+.totalPrice{
+    height: 37px;
+    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    font-family: "Montserrat-Bold";
+    font-size: 18px;
+    color: #8bbc75;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #8bbc751f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finalizarCompra{
+    height: 30px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  rgba(0, 0, 0, 0.405);
+}
+
+.finalizarCompra:hover{
+    background-color:  #8bbc75;
+    color: white;
+}
+
+.mensajeAuto{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mensajeAuto p{
+    font-size: 20px;
+    text-align: center;
+    font-family: "FuturaBO";
+}
+
+.botonesAgr{
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    font-family: "Montserrat-Bold";
+    font-size: 15px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid  rgba(0, 0, 0, 0.405);
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.botonesAgr:hover{
+    background-color: #8bbc75;
+    color: white;
+    border:none;
+
+}
+
+
+@media only screen and (min-width: 480px){
+    .infoCart{
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    .cartContainer{
+        width: 100%;
+        display: flex;
+        flex-flow: row, nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #ItemCart{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+        margin-top: 10px;
+    }
+    .ordenCompra{
+        width: 50%;
+    }
+
+    .totalPrice{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){
+
 }
